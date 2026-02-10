@@ -61,7 +61,7 @@ endforeach ()
 configure_file(src/version.h.in macros/version.h @ONLY)
 configure_file(src/offsets.h.in macros/offsets.h @ONLY)
 
-target_link_libraries(${PROJECT_NAME} spdlog safetyhook yaml-cpp)
+target_link_libraries(${PROJECT_NAME} spdlog safetyhook yaml-cpp ntdll)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
 target_precompile_headers(${PROJECT_NAME} PRIVATE src/pch.h)
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/macros)
